@@ -5,7 +5,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey[100],
+          backgroundColor: Colors.grey[200],
           title: Text('Dice roller'),
         ),
         body: Text('Hello World'),
