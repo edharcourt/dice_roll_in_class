@@ -1,4 +1,5 @@
 // dice_container.dart
+import 'package:dice_roll_in_class/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 class DiceContainer extends StatelessWidget {
@@ -22,7 +23,7 @@ class DiceContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: Text('Hello World'),
+        child: DiceRoller(),
       ),
     );
   }
