@@ -13,10 +13,9 @@ class DiceRoller extends StatefulWidget {
 final rng = Random();
 
 class _DiceRollerState extends State<DiceRoller> {
-
   var currImage1 = 'assets/images/dice-1.png';
   var currImage2 = 'assets/images/dice-1.png';
-  
+
   int counter = 0;
   var r1 = 1;
   var r2 = 1;
@@ -30,7 +29,7 @@ class _DiceRollerState extends State<DiceRoller> {
     setState(() {
       currImage1 = 'assets/images/dice-$r1.png';
       currImage2 = 'assets/images/dice-$r2.png';
-    });    
+    });
   }
 
   @override
@@ -70,9 +69,28 @@ class _DiceRollerState extends State<DiceRoller> {
           color: Colors.grey[200],
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Text(output)
+            child: Text(output),
+          ),
+        ),
+      
+        const SizedBox(height: 40),
+
+        ElevatedButton(
+          onPressed: () { 
+            setState(() {
+              output = ''; counter = 0;
+            });
+          },
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.grey[200],
+            backgroundColor: Colors.blue,
+            textStyle: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
-        )
+          ),
+          child: const Text('Clear Output'),
+        ),
       ],
     );
   }
