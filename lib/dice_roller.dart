@@ -1,9 +1,26 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-class DiceRoller extends StatelessWidget {
+class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
 
-  final String curr_image = 'assets/images/dice-1.png';
+  @override
+  State<DiceRoller> createState() => _DiceRollerState();
+}
+
+final rng = Random();
+
+class _DiceRollerState extends State<DiceRoller> {
+
+  var currImage = 'assets/images/dice-1.png';
+  
+  void rollDice() {
+    var r = rng.nextInt(6) + 1;
+    setState(() {
+      currImage = 'assets/images/dice-$r.png';
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +28,11 @@ class DiceRoller extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          curr_image,
+          currImage,
           width: 200,
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: rollDice,
           style: ElevatedButton.styleFrom(
             foregroundColor: Colors.grey[200],
             backgroundColor: Colors.blue,
