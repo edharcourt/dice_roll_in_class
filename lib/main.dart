@@ -7,7 +7,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey[200],
+          backgroundColor: Colors.grey[920],
           title: const Text('Dice roller'),
         ),
         body: const DiceContainer(),
