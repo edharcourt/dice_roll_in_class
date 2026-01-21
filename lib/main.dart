@@ -8,9 +8,9 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.grey[200],
-          title: Text('Dice roller'),
+          title: const Text('Dice roller'),
         ),
-        body: DiceContainer(),
+        body: const DiceContainer(),
       ),
     ),
   );

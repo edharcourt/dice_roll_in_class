@@ -22,9 +22,10 @@ class DiceContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Center(
-        child: DiceRoller(),
-      ),
+      //child: const Center(
+      //  child: DiceRoller(),
+      //),
+      child: const DiceRoller(),
     );
   }
 }
